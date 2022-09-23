@@ -1,0 +1,15 @@
+package com.example.fisairlinepassenge.service;
+
+import java.util.List;
+
+import com.example.fisairlinepassenge.modal.Passengerrole;
+
+public interface AdminService {
+	
+	public List<Passengerrole> getalldata();
+	public Passengerrole addData(Passengerrole admin);
+	public Passengerrole updateData(Passengerrole admin);
+	public String deleteData(int fl_id);
+	public String deletePassenger(int p_id);
+
+}

@@ -1,0 +1,12 @@
+package com.example.fisairlineadmin.service;
+
+import com.example.fisairlineadmin.modal.Adminrole;
+
+public interface adminservice {
+	
+	public Adminrole addData(Adminrole admin);
+	public Adminrole updateData(Adminrole admin);
+	public String deleteData(int fl_id);
+	//public String deletePassenger(int p_id);
+
+}

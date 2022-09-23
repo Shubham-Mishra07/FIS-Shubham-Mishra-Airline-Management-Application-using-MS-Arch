@@ -1,0 +1,46 @@
+package com.example.fisairlinepassenge.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.fisairlinepassenge.modal.Passengerrole;
+import com.example.fisairlinepassenge.repo.PassengerRepository;
+
+@Service
+public class AdminServiceImpl implements PassengerService {
+	
+	@Autowired
+	PassengerRepository repo;
+
+	
+	@Override
+	public List<Passengerrole> getalldata() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+	
+	
+	@Override
+	public Passengerrole addData(Passengerrole admin) {
+		// TODO Auto-generated method stub
+		return repo.save(admin);
+	}
+
+	@Override
+	public Passengerrole updateData(Passengerrole admin) {
+		// TODO Auto-generated method stub
+		return repo.save(admin);
+	}
+
+	@Override
+	public String deleteData(int fl_id) {
+		// TODO Auto-generated method stub
+		repo.deleteById(fl_id);
+		return "deleted";
+	}
+
+	
+
+}
