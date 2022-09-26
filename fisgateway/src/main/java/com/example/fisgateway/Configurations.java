@@ -12,7 +12,7 @@ public class Configurations {
 	public RouteLocator getRoutesLocator(RouteLocatorBuilder rout) {
 		return rout.routes()
 				.route(p->p.path("/airline/**").uri("lb://adminservice/airline"))
-				.route(p->p.path("/airpassenger/**").uri("lb://customer/airpassenger"))
+				.route(p->p.path("/airpassenger/**").uri("lb://passenger/airpassenger"))
 				.build();
 	}
 
